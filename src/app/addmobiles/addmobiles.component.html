@@ -1,0 +1,6 @@
+<form (ngSubmit)="onSubmit()">
+    <input type="text" class="form-control mt-4 w-75 d-block mx-auto" name="productTitle" placeholder="productTitle" [(ngModel)]="mobileModel.productTitle">
+    <input type="text" class="form-control mt-4 w-75 d-block mx-auto" name="description" placeholder="description" [(ngModel)]="mobileModel.description">
+    <input type="text" class="form-control mt-4 w-75 d-block mx-auto"  name="productImage" placeholder="imageurl" [(ngModel)]="mobileModel.productImage">
+    <button class="btn  mt-4 w-50 d-block mx-auto" type="submit" style="background-color: rgb(100, 237, 230);">Add new games</button>
+</form>

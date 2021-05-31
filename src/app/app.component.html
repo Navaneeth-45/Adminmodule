@@ -1,0 +1,186 @@
+<!-- <h1>welcome to angular framework</h1>
+<hr>
+<div class="text-center">
+<h1>{{nameofcourse}} <span>{{version}}</span></h1>
+<h1>{{name}}</h1>
+<h1>{{coursedetails.nameofcourse}}</h1>
+<h1>{{coursedetails.duration}}</h1>
+
+<input type="text" value={{nameofcourse}}>
+<input type="text" [value]=nameofcourse>
+<button disabled={{status}}>test button</button>
+<button [disabled]=status>test button</button>
+
+<div>
+ <input type="text" #ref>
+ <button (click)="sendData(ref.value)" >send data</button>
+</div>
+<h1>{{data}}</h1>
+
+<button (click)="changeStatus()" >{{status? "hide":"click"}}</button>
+<h1 *ngIf="status">welcome</h1>
+<h2 *ngFor="let n of arr">{{n}}</h2>
++
+<ul>
+    <li *ngFor="let x of arr">{{x}}</li>
+</ul>
+
+<div>
+    <label for="ab">Add to-do item</label>
+    <input type="text" id="ab" #re>
+    <button (click)="namesData(re.value);re.value='' ">Add to list</button>
+   </div>
+   <div>
+       <h1>List of actions</h1>
+       <hr>
+       <h2 *ngFor="let n of todoItems">{{n}}</h2>
+   </div>
+   
+</div> -->
+ <!-- <div class=" mt-5 mx-auto w-50">
+     <h1 class="text-center text-danger p-1" style="background-color: yellow;"><i class="fas fa-users text-secondary"></i>  Users Information</h1>
+     <hr>
+     <label for="user">Add Names Of Users</label>
+     <input type="text" name="" id="user" class="form-control" #ref>
+     <button class="btn text-white d-block mx-auto mt-3" (click)="sendItem(ref.value);ref.value='' " style="background-color: rgb(255, 71, 194);">Add to List <i class="fas fa-user-plus"></i></button>
+
+     <div class="text-center mt-5">
+     <h1 class="bg-dark text-white"><i class="fas fa-list"></i>   List of items</h1>
+     <hr>
+     <button class="btn btn-secondary mt-3 text-white" (click)="changeStatus()"  style="background-color: rgba(105, 71, 255, 0.945);" >{{status?" Hide Users":"Show users"}}</button>
+     <div *ngIf="status">
+         <h4 *ngFor="let items of todoItems" class="w-50 mx-auto mt-2 p-1 " style="background-color: rgba(128, 128, 128, 0.329);color: rgb(130, 0, 102);">{{items}}</h4>
+     </div>
+     </div>
+
+   
+ </div> -->
+ <!-- <div class="w-50 mx-auto mt-5" >
+    <h1 class="text-center text-danger p-1" style="background-color: rgb(229, 255, 0);"><i class="fas fa-users text-secondary"></i>  Users Information</h1>
+    <hr>
+    <form #ref="ngForm" (ngSubmit)="addUserData(ref)"  >
+        <div>
+            <label for="username" class="form-label"><strong>Username</strong></label >
+            <input  class="form-control" type="text"  name="username" id="name" ngModel>
+        </div>
+        <div>
+            <label for="DOB" class="form-label" ><strong>DOB</strong></label >
+            <input  class="form-control" type="date"  name="DOB" id="DOB" ngModel>
+        </div>
+
+        <div>
+            <label for="email" class="form-label"><strong>Email</strong></label>
+            <input  class="form-control" type="email"  name="email" id="email" ngModel>
+        </div>
+        <button class="btn  d-block mx-auto mt-3" type="submit" style="background-color: rgb(122, 8, 93); color: ivory;">Register   <i class="fas fa-user-plus"></i></button>
+    </form>
+
+    <div class="text-center">
+        <h1 class="bg-dark text-white mt-3"><i class="fas fa-list"></i>   Users list</h1>
+     <hr>
+    </div>
+    <div >
+        <h1 *ngIf="users.length==0" class="text-success text-center">No users data found</h1>
+        <div id="ac" class="accordion " *ngIf="users.length!=0" >
+
+            <div  *ngFor="let item of users;let ind=index"class="accordion-item w-50 mx-auto ax" >
+                <div class="accordion-header">
+                    
+                    <button  class="accordion-button text-dark " [attr.data-bs-target]="'#c1' +ind" data-bs-toggle="collapse" ><strong>{{item.username}}</strong><button  id="bt" class="btn btn-danger mx-right" (click)="deleteItem(ind)" style="background-color: red;"><i class="fas fa-trash-alt"></i></button></button>
+                </div>
+            
+            <div class="accordion-collapse collapse" [attr.id]="'c1' +ind" data-bs-parent="#ac">
+                <h5 class="text-center mt-1 text-danger"> Username is:{{item.username}}</h5>
+                <h5 class="text-center mt-1 text-warning"> DOB is:{{item.DOB}}</h5>
+                <h5 class="text-center mt-1 text-success">Email is:{{item.email}}</h5>
+            </div>
+        </div>
+
+     </div>
+    </div>
+ </div>
+  -->
+  <!-- <div class="container mt-5 " style="background-color:yellow;">
+      <h1 class=" text-center m-5" style="font-family: 'Abril Fatface', cursive;
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Original Surfer', cursive;font-size: 50px;color: rgb(130, 0, 0);"><i class="fas fa-eye" style="color: rgb(130, 0, 102);"></i>Top sights in India<i class="far fa-eye" style="color: rgb(130, 0, 102);"></i></h1>
+      <hr>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 p-4">
+        <div class="col p-3">
+            <app-cardone></app-cardone>
+        </div>
+        <div class="col p-3">
+            <app-cardtwo></app-cardtwo>
+        </div>
+        <div class="col p-3">
+            <app-cardthree></app-cardthree>
+        </div>
+        <div class="col p-3">
+            <app-cardfour></app-cardfour>
+        </div>
+        <div class="col p-3">
+            <app-cardfive></app-cardfive>
+        </div>
+        <div class="col p-3">
+            <app-cardsix></app-cardsix>
+        </div>
+    </div>
+</div> -->
+
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <a class="navbar-brand text-white" href="#"><i class="fab fa-instagram ms-5" style="font-size: 50px;"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item ">
+          <a class="nav-link text-white" routerLink="home" routerLinkActive="active" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white"  routerLink="signup" routerLinkActive="active">Sign Up</a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link text-white"  routerLink="login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white"  routerLink="contactus" routerLinkActive="active">Help Cente</a>
+          </li>
+      </ul>
+     
+    </div>
+  </nav> -->
+ 
+    <ul class="nav nav-pills  justify-content-evenly mt-5">
+    <li class="nav-item ">
+      <a class="nav-link bg-danger text-white mt-2" routerLink="mobiles" routerLinkActive="active"  >Games</a>
+    </li>
+    <li class="nav-item " *ngIf="!dsObj.userLoginStatus()">
+        <a class="nav-link bg-danger text-white mt-2" routerLink="login" routerLinkActive="active"  >Login</a>
+      </li>
+      <li class="nav-item " *ngIf="dsObj.userLoginStatus()">
+        <a class="nav-link bg-danger text-white mt-2" routerLink="login" (click)="dsObj.userLogout()" routerLinkActive="active"  >Logout</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link bg-danger text-white mt-2" routerLink="addmobiles" routerLinkActive="active"  >AddGames</a>
+      </li>
+     
+     
+   
+  </ul>
+  <hr> 
+
+<!-- <app-footer class="mt-auto"></app-footer> -->
+<!-- <a class="nav-link bg-warning text-white mt-2 text-center p-3" routerLink="users" routerLinkActive="active" style="font-size: 30px;"  >Users</a>
+<a class="nav-link bg-success text-white mt-2 text-center p-3" routerLink="users1" routerLinkActive="active" style="font-size: 30px;"  >Users1</a> -->
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+  

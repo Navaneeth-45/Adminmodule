@@ -1,0 +1,52 @@
+
+<table class="table text-dark  mt-5 " >
+    <div class="background w-75 d-block mx-auto">
+    <table class="table text-dark  p-5" >
+        <thead>
+            <tr>
+    
+                <th>id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>email</th>
+                <th>address</th>
+                <th>phone</th>
+                <th>website</th>
+                <th>company</th>
+               
+
+            
+    
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let postObj of users">
+                <td>{{postObj.id}}</td>
+                <td>{{postObj.name}}</td>
+                <td>{{postObj.username}}</td>
+                <td>{{postObj.email}}</td>
+                <td><ul>
+                    <li><strong>street:</strong>{{postObj.address.street}}</li>
+                    <li><strong>suite:</strong>{{postObj.address.suite}}</li>
+                    <li><strong>city:</strong>{{postObj.address.city}}</li>
+                    <li><strong>zipcode:</strong>{{postObj.address.zipcode}}</li>
+                    <li><strong>lat:</strong>{{postObj.address.geo.lat}}</li>
+                    <li><strong>lng:</strong>{{postObj.address.geo.lng}}</li>
+                </ul></td>
+                <td>{{postObj.phone}}</td>
+                <td>{{postObj.website}}</td>
+                <td><ul>
+                    <li><strong>Company Name:</strong>:{{postObj.company.name}}</li>
+                    <li><strong>Company catchPhrase:</strong>{{postObj.company.catchPhrase}}</li>
+                    <li><strong>Company bs:</strong>{{postObj.company.bs}}</li>
+                </ul></td>
+                </tr>
+            </tbody>
+            </table>
+        
+            </div>
+            </table>
+        
+        
+                   

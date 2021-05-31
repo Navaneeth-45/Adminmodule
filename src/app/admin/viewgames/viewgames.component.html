@@ -1,0 +1,46 @@
+<div class="table-content">
+    <form #ref="ngForm" (ngSubmit)="saveGame(ref.value)">
+<table class="table w-75 text-dark d-block mx-auto">
+    <thead>
+        <th>Game</th>
+        <th>Description</th>
+        <th>Image</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mobile of mobiles;let ind=index">
+            <td>
+                <span *ngIf="!editGameStatus || editGameIndex!=ind">
+                {{mobile.productTitle|uppercase}}
+            </span>
+            <span *ngIf="editGameStatus && editGameIndex==ind">
+                <input type="text" name="productTitle" [(ngModel)]="editGameObj.productTitle" >
+            </span>
+            
+            </td>
+            <td>
+                <span *ngIf="!editGameStatus || editGameIndex!=ind">
+                    {{mobile.description}}
+                </span>
+                <span *ngIf="editGameStatus && editGameIndex==ind">
+                    <input type="text" name="description" [(ngModel)]="editGameObj.description" >
+                </span>
+            </td>
+            <td>
+                <img src="{{mobile.productImage}}" alt="" width="150px">
+               
+            </td>
+            <td>
+                <span *ngIf="!editGameStatus || editGameIndex!=ind">
+                    <button class="btn btn-success "  type="button" (click)="editGame(mobile,ind)"><i class="fas fa-edit"></i></button>
+                    <button class="btn btn-primary mt-2 " type="button" (click)="deleteGame(mobile)"><i class="fas fa-trash-alt"></i></button>
+                </span>
+                <span *ngIf="editGameStatus && editGameIndex==ind" >
+                    <button class="btn btn-warning "  type="submit"><i class="fas fa-save"></i></button>
+                   
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</form>
+</div>

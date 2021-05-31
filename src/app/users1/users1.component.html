@@ -1,0 +1,33 @@
+<table class="table text-dark  mt-5 " >
+    <div class="background w-75 d-block mx-auto">
+    <table class="table text-dark  p-5" >
+        <thead>
+            <tr>
+    
+                <th>id</th>
+                <th>name</th>
+                <th>year</th>
+                <th>color</th>
+                <th>pantone_value</th>
+            
+    
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let postObj of users.data">
+                <td>{{postObj.id}}</td>
+                <td>{{postObj.name}}</td>
+                <td>{{postObj.year}}</td>
+                <td>{{postObj.color}}</td>
+                <td>{{postObj.pantone_value}}</td>
+               
+                </tr>
+            </tbody>
+            </table>
+        
+            </div>
+            </table>
+        
+        
+                   
